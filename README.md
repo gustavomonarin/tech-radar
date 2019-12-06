@@ -1,5 +1,5 @@
 # tech-radar
-Hosts the csv data for out internal Tech-Radar
+Hosts the csv data for our internal Tech Radar.
 
 This repo is intentionally public.
 
