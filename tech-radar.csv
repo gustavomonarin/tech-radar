@@ -86,3 +86,5 @@ SSRS,Adopt,Tools,TRUE,,Database Architect,Kelvin Schmalle,
 SSAS,Adopt,Tools,TRUE,,Database Architect,Kelvin Schmalle,
 SSIS,Adopt,Tools,TRUE,,Database Architect,Kelvin Schmalle,TBD
 GitHub,Adopt,Tools,TRUE,"GitHub is widely used and we have no plans to abandon it, though Azure DevOps is cool too 🤷‍♀️",ETS,,
+CQS,Adopt,Patterns & Techniques,TRUE,"The Command Query Separation pattern is fundamentally about keeping queries side-effect free, ie: asking a question shouldn't change the answer. This principle aims to keep interfaces simple and the consequences of calling a method obvious.",PDLG,Andrew K,
+CQS Abstractions & AOP,Hold,"Languages, Frameworks & Platforms",TRUE,"Libraries such as <a href=""https://github.com/iQmetrix/IQ.Vanilla.CQS.AOP"">IQ.Vanilla.CQS.AOP</a> and <a href=""https://github.com/RyanMarcotte/Functional.CQS"">Functional.CQS</a> have been found to provide limited benefit and increased complexity. Unless you clearly need the benefits of Aspect Oriented Programming, consider instead creating simple and clear interfaces following the CQS principle.",PDLG,Andrew K,
