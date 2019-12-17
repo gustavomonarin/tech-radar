@@ -44,7 +44,7 @@ Sass,Adopt,"Languages, Frameworks & Platforms",FALSE,,Developer,Garrett Smith,Fr
 Monorepo,Assess,Agile & Team Practices,FALSE,,Developer,Garrett Smith,Front end review
 Typescript ,Trial,"Languages, Frameworks & Platforms",FALSE,,Developer,Garrett Smith,Front end review
 ECMAscript 6+,Adopt,"Languages, Frameworks & Platforms",FALSE,,Developer,Garrett Smith,Front end review
-.NET Core 3.0,Adopt,"Languages, Frameworks & Platforms",TRUE,.NET Core 3.0 is the latest release and is fully supported by Microsoft.,PDLG,,Add docs in product excellence repo
+.NET Core 3.1,Adopt,"Languages, Frameworks & Platforms",TRUE,.NET Core 3.1 is the latest release and is fully supported by Microsoft.,PDLG,,Add docs in product excellence repo
 .NET Framework 4.x,Hold,"Languages, Frameworks & Platforms",FALSE,"Use of the .NET Framework is no longer recommended for server-side code or shared libraries, with preference now given to .NET Core and .NET Standard. (If .NET Framework is used, the most current version is recommended, with 4.6.1 the absolute minimum.)",Architecture,,"Review description, add caveats"
 .NET Standard 2.0,Adopt,"Languages, Frameworks & Platforms",TRUE,,Architecture,,Review description
 Azure Table Storage,Adopt,Tools,TRUE,"Table Storage has been widely used by many dev teams. However, it is still not a good fit for some usage patterns.",Database Architect,Kelvin Schmalle,Update docs on when to use
