@@ -11,7 +11,7 @@ Outbox pattern,Adopt,Patterns & Techniques,FALSE,The Outbox pattern allows a ser
 Redis,Adopt,Tools,TRUE,Redis is commmonly used as distributed cache.,Architecture,Scott S,Add/link to docs
 MongoDB,Adopt,Tools,FALSE,,Database Architect,Kelvin Schmalle,Link to docs
 Client Libraries,Assess,Patterns & Techniques,FALSE,"Owners of a service implement official client library(ies) to access their service in an effecient, fault tolerant manner.",Architecture,Scott S,Maybe split for reasons why to use a client library and not use a client library
-[Placeholder] Simple HTTP Client Libraries,Hold,Patterns & Techniques,,,,Scott S,
+Simple HTTP Client Libraries,Hold,Patterns & Techniques,,"HTTP clients which simply wrap up some REST calls and provide no siginificant fallback, retry or other complex logic are discouraged.",,Scott S,
 OData,Hold,Tools,FALSE,,Architecture,Scott S,"Review description, what's the alternative?"
 Auto incrementing Integer Ids,Hold,Patterns & Techniques,FALSE,Auto incrementing integer ids are introduct difficulties during fail-over or multi-writer distributed scenarios.  They also complicate developing against non-prod systems and data sharding.,Architecture,Scott S,"Review description, what's the alternative?"
 Azure Cosmos DB,Hold,Tools,TRUE,"CosmosDB has been found to be useful in some limited cases, but it's still way too expensive.",Database Architect,Kelvin Schmalle,
