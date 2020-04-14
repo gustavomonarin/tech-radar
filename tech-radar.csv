@@ -21,22 +21,22 @@ Figma,Adopt,Tools,FALSE,,Design,,
 Accessibility Standards,Adopt,Patterns & Techniques,FALSE,Products should be usable and useful to everyone despite any disabilities they may have. Check the Design Discipline Playbook for some resources on designing for colour blindness and other disabilities.,Design,,
 Canary releases,Trial,Patterns & Techniques,FALSE,,SRE,Jeff E,Add notes around current RQ trial of this
 Failover testing,Adopt,Patterns & Techniques,FALSE,"Failover tests independent of a current issue or incident allows for confidence in the environment's ability to withstand an event, and ensure people respond to the events appropriately.",SRE,Jeff E,
-npm,Adopt,Tools,FALSE,,Developer,Garrett Smith,Front end review
-Yarn,Adopt,Tools,TRUE,,Developer,Garrett Smith,Front end review
-React,Adopt,"Languages, Frameworks & Platforms",TRUE,,Developer,Garrett Smith,Front end review
-Angular,Hold,"Languages, Frameworks & Platforms",TRUE,,Developer,Garrett Smith,Front end review
-React Native,Assess,"Languages, Frameworks & Platforms",TRUE,,Developer,Garrett Smith,Front end review
-Ionic,Hold,"Languages, Frameworks & Platforms",TRUE,,Developer,Garrett Smith,Front end review
-Backbone + Marionette / Hub v1,Hold,"Languages, Frameworks & Platforms",FALSE,,Developer,Garrett Smith,Front end review
-Aurelia / Hub v2,Hold,"Languages, Frameworks & Platforms",FALSE,,Developer,Garrett Smith,Front end review
-Gulp,Hold,Tools,FALSE,,Developer,Garrett Smith,Front end review
-webpack,Adopt,Tools,TRUE,,Developer,Garrett Smith,Front end review
-Redux,Assess,"Languages, Frameworks & Platforms",TRUE,,Developer,Garrett Smith,Front end review
-Jade / Pug,Hold,"Languages, Frameworks & Platforms",TRUE,,Developer,Garrett Smith,Front end review
-Sass,Assess,"Languages, Frameworks & Platforms",TRUE,,Developer,Garrett Smith,Front end review
-Monorepo,Adopt,Agile & Team Practices,TRUE,,Developer,Garrett Smith,Add guidance
-Typescript ,Adopt,"Languages, Frameworks & Platforms",TRUE,,Developer,Garrett Smith,Front end review
-ECMAscript 6+,Adopt,"Languages, Frameworks & Platforms",FALSE,,Developer,Garrett Smith,Front end review
+npm,Adopt,Tools,FALSE,A popular JavaScript package manager. This should be the standard for managing a JS projects dependencies.,Developer,Garrett Smith,Front end review
+Yarn,Adopt,Tools,TRUE,An alternative JavaScript packages manager. In some cases it has additional features that make it useful but npm should be preferred in general.,Developer,Garrett Smith,Front end review
+React,Adopt,"Languages, Frameworks & Platforms",TRUE,A JavaScript component based UI library. New web apps should consider this the default choice for developing new projects.,Developer,Garrett Smith,Front end review
+Angular,Hold,"Languages, Frameworks & Platforms",TRUE,A JavaScript platform for web applications. ,Developer,Garrett Smith,Front end review
+React Native,Assess,"Languages, Frameworks & Platforms",TRUE,A JavaScript  component based UI library for native mobile applications. ,Developer,Garrett Smith,Front end review
+Ionic,Hold,"Languages, Frameworks & Platforms",TRUE,A platform for JavaScript cross-platform web applications. Based on Angular.,Developer,Garrett Smith,Front end review
+Backbone + Marionette (Hub v1),Hold,"Languages, Frameworks & Platforms",FALSE,A JavaScript library for RESTful model-view-presenter library and associated web application framework.,Developer,Garrett Smith,Front end review
+Aurelia (Hub v2),Hold,"Languages, Frameworks & Platforms",FALSE,A JavaScript application framework.,Developer,Garrett Smith,Front end review
+Gulp,Hold,Tools,FALSE,A JavaScript build system toolkit now largely superseeded by Webpack and npm scripts.,Developer,Garrett Smith,Front end review
+webpack,Adopt,Tools,TRUE,A JavaScript module bundler used to transform applications into distributable static assets.,Developer,Garrett Smith,Front end review
+Redux,Assess,"Languages, Frameworks & Platforms",TRUE,A JavaScript flux-inspired application state management library.,Developer,Garrett Smith,Front end review
+Jade / Pug,Hold,"Languages, Frameworks & Platforms",TRUE,A template engine and language for browsers and NodeJS,Developer,Garrett Smith,Front end review
+Sass,Assess,"Languages, Frameworks & Platforms",TRUE,A superset language of CSS. Less needed for applications built on the design system components but still useful.,Developer,Garrett Smith,Front end review
+Monorepo,Adopt,Agile & Team Practices,TRUE,"A software repository pattern where multiple projects are all version controlled within a single repository. This simplifies making changes across multiple repositories, eases code reuse, and improves discoverability, at the cost of more noise and large storage requirements.",Developer,Garrett Smith,Add guidance
+Typescript ,Adopt,"Languages, Frameworks & Platforms",TRUE,A typed superset of the JavaScript language. Improves runtime safety at the expense of a stricter development process.,Developer,Garrett Smith,Front end review
+ECMAscript 6+,Adopt,"Languages, Frameworks & Platforms",FALSE,"The modern JavaScript language. Including modules, classes, and many other syntax additions.",Developer,Garrett Smith,Front end review
 .NET Core 3.1,Adopt,"Languages, Frameworks & Platforms",FALSE,.NET Core 3.1 is the latest release and is fully supported by Microsoft.,PDLG,,Add docs in product excellence repo
 .NET Standard 2.0,Adopt,"Languages, Frameworks & Platforms",FALSE,,Architecture,,Review description
 Azure Table Storage,Assess,Tools,TRUE,"Table Storage has been widely used by many dev teams. However, it is still not a good fit for some usage patterns.",Database Architect,Kelvin Schmalle,Update docs with concerns RE: DR and scale limits
