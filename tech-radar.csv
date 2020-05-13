@@ -59,7 +59,7 @@ TeamCity,Hold,Tools,FALSE,Teams are encouraged to use Azure DevOps for new proje
 RQ Sproc Bridge Service,Assess,Tools,FALSE,"The RQ Sproc Bridge Service allows code from outside RQ to call sprocs within the RQ Database. The sprocs should be created outside the dbo namespace, and are written, owned, and maintained by the team that calls them. Data that is accessed from a service via Sproc Bridge should be data that the service intends to own one day. These sprocs should be viewed as a temporary measure; calls to the Sproc Bridge Service should eventually be replaced by the service owning the data itself.",PDLG,Andrew K,Link to policy
 Cassandra DB,Trial,Tools,TRUE,,Database Architect,Kelvin Schmalle,
 Kafka,Trial,Tools,TRUE,,Database Architect,Kelvin Schmalle,Add/update docs on assessment
-Azure DevOps,Adopt,Tools,FALSE,"See <a href=""https://github.com/iQmetrix/AzureDevOps.Documentation"">Azure Devops Documentation</a>.",SRE Embedded,Dan Schroeder,
+Azure DevOps,Adopt,Tools,FALSE,"Azure DevOps combines source control, work item tracking, build and deploy, scrum tools, and more. See <a href=""https://github.com/iQmetrix/product-excellence/tree/master/devops"">Azure Devops Documentation</a>.",SRE Embedded,Dan Schroeder,
 Service Broker,Hold,Tools,FALSE,Use of SQL Service Broker to communicate out of the DC to Azure,Database Architect,Kelvin Schmalle,This should no longer be used 
 Data Lakes,Trial,Patterns & Techniques,TRUE,,Database Architect,Kelvin Schmalle,Add notes 
 Azure Event Hub,Trial,Tools,TRUE,,Database Architect,Kelvin Schmalle,Add notes 
