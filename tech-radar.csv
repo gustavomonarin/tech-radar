@@ -71,8 +71,8 @@ GitHub,Adopt,Tools,FALSE,"GitHub is widely used and we have no plans to abandon 
 CQS,Adopt,Patterns & Techniques,FALSE,"The <a href=""https://martinfowler.com/bliki/CommandQuerySeparation.html"">Command Query Separation</a> pattern is fundamentally about keeping queries side-effect free, ie: asking a question shouldn't change the answer. This principle aims to keep interfaces simple and the consequences of calling a method obvious.",PDLG,Andrew K,
 IQ.Vanilla CQS AOP,Hold,"Languages, Frameworks & Platforms",FALSE,"Libraries such as <a href=""https://github.com/iQmetrix/IQ.Vanilla.CQS.AOP"">IQ.Vanilla.CQS.AOP</a> and <a href=""https://github.com/RyanMarcotte/Functional.CQS"">Functional.CQS</a> have been found to provide limited benefit and increased complexity. Unless you clearly need the benefits of Aspect Oriented Programming, consider instead creating simple and clear interfaces following the CQS principle.",PDLG,Andrew K,
 Azure App Insights,Assess,Tools,TRUE,O11y for Azure,SRE Observability,,Pending decision on common O11y tools
-Azure DevOps pipelines,Adopt,Tools,TRUE,Azure classic CI/CD pipelines,SRE Embedded,,
-Azure DevOps yml pipelines,Trial,Tools,TRUE,Azure CI/CD pipelines,SRE Embedded,,
+Azure DevOps Pipelines,Adopt,Tools,TRUE,"Pipelines and Releases are Microsoft's "classic" way of doing builds and deploys. Microsoft includes trigger support for repos in Azure DevOps and Github. <a href="https://github.com/iQmetrix/product-excellence/blob/master/devops/buildanddeploy.md">Build and Deploy Guides</a>",SRE Embedded,,
+Azure DevOps YAML Pipelines,Trial,Tools,TRUE,"YAML pipelines are Microsoft's next generation way of doing builds and deploys. YAML pipelines still lack some important features, but in the long term they look very promising. <a href="https://github.com/iQmetrix/product-excellence/blob/master/devops/buildanddeploy.md">Build and Deploy Guides</a>",SRE Embedded,,
 Appium + WinApp driver,Assess,Tools,TRUE,Windows UI Test automation,PDLG,,
 Cypress,Assess,Tools,TRUE,Browser UI Test automation,Developer,,
 Detox,Assess,Tools,TRUE,Mobile UI Test automation,PDLG,,
