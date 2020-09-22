@@ -22,24 +22,24 @@ Accessibility Standards,Adopt,Patterns & Techniques,FALSE,Products should be usa
 Canary releases,Trial,Patterns & Techniques,FALSE,,SRE,Jeff E,Add notes around current RQ trial of this
 Failover testing,Adopt,Patterns & Techniques,FALSE,"Failover tests independent of a current issue or incident allows for confidence in the environment's ability to withstand an event, and ensure people respond to the events appropriately.",SRE,Jeff E,
 npm,Adopt,Tools,FALSE,A popular JavaScript package manager. This should be the standard for managing a JS projects dependencies.,PDLG,Garrett Smith,Front end review
-Yarn,Adopt,Tools,TRUE,An alternative JavaScript packages manager. In some cases it has additional features that make it useful but npm should be preferred in general.,PDLG,Garrett Smith,Front end review
-React,Adopt,"Languages, Frameworks & Platforms",TRUE,A JavaScript component based UI library. New web apps should consider this the default choice for developing new projects.,PDLG,Garrett Smith,Front end review
-Angular,Hold,"Languages, Frameworks & Platforms",TRUE,A JavaScript platform for web applications. ,PDLG,Garrett Smith,Front end review
-React Native,Assess,"Languages, Frameworks & Platforms",TRUE,A JavaScript  component based UI library for native mobile applications. ,PDLG,Garrett Smith,Front end review
-Ionic,Hold,"Languages, Frameworks & Platforms",TRUE,A platform for JavaScript cross-platform web applications. Based on Angular.,PDLG,Garrett Smith,Front end review
+Yarn,Adopt,Tools,FALSE,An alternative JavaScript packages manager. In some cases it has additional features that make it useful but npm should be preferred in general.,PDLG,Garrett Smith,Front end review
+React,Adopt,"Languages, Frameworks & Platforms",FALSE,A JavaScript component based UI library. New web apps should consider this the default choice for developing new projects.,PDLG,Garrett Smith,Front end review
+Angular,Hold,"Languages, Frameworks & Platforms",FALSE,A JavaScript platform for web applications. ,PDLG,Garrett Smith,Front end review
+React Native,Assess,"Languages, Frameworks & Platforms",FALSE,A JavaScript  component based UI library for native mobile applications. ,PDLG,Garrett Smith,Front end review
+Ionic,Hold,"Languages, Frameworks & Platforms",FALSE,A platform for JavaScript cross-platform web applications. Based on Angular.,PDLG,Garrett Smith,Front end review
 Backbone + Marionette (Hub v1),Hold,"Languages, Frameworks & Platforms",FALSE,A JavaScript library for RESTful model-view-presenter library and associated web application framework.,PDLG,Garrett Smith,Front end review
 Aurelia (Hub v2),Hold,"Languages, Frameworks & Platforms",FALSE,A JavaScript application framework.,PDLG,Garrett Smith,Front end review
 Gulp,Hold,Tools,FALSE,A JavaScript build system toolkit now largely superseeded by Webpack and npm scripts.,PDLG,Garrett Smith,Front end review
-webpack,Adopt,Tools,TRUE,A JavaScript module bundler used to transform applications into distributable static assets.,PDLG,Garrett Smith,Front end review
-Redux,Assess,"Languages, Frameworks & Platforms",TRUE,A JavaScript flux-inspired application state management library.,PDLG,Garrett Smith,Front end review
-Jade / Pug,Hold,"Languages, Frameworks & Platforms",TRUE,A template engine and language for browsers and NodeJS,PDLG,Garrett Smith,Front end review
-Sass,Assess,"Languages, Frameworks & Platforms",TRUE,A superset language of CSS. Less needed for applications built on the design system components but still useful.,PDLG,Garrett Smith,Front end review
-Monorepo,Adopt,Agile & Team Practices,TRUE,"A software repository pattern where multiple projects are all version controlled within a single repository. This simplifies making changes across multiple repositories, eases code reuse, and improves discoverability, at the cost of more noise and large storage requirements.",PDLG,Garrett Smith,Add guidance
-Typescript ,Adopt,"Languages, Frameworks & Platforms",TRUE,A typed superset of the JavaScript language. Improves runtime safety at the expense of a stricter development process.,PDLG,Garrett Smith,Front end review
+webpack,Adopt,Tools,FALSE,A JavaScript module bundler used to transform applications into distributable static assets.,PDLG,Garrett Smith,Front end review
+Redux,Assess,"Languages, Frameworks & Platforms",FALSE,A JavaScript flux-inspired application state management library.,PDLG,Garrett Smith,Front end review
+Jade / Pug,Hold,"Languages, Frameworks & Platforms",FALSE,A template engine and language for browsers and NodeJS,PDLG,Garrett Smith,Front end review
+Sass,Assess,"Languages, Frameworks & Platforms",FALSE,A superset language of CSS. Less needed for applications built on the design system components but still useful.,PDLG,Garrett Smith,Front end review
+Monorepo,Adopt,Agile & Team Practices,FALSE,"A software repository pattern where multiple projects are all version controlled within a single repository. This simplifies making changes across multiple repositories, eases code reuse, and improves discoverability, at the cost of more noise and large storage requirements.",PDLG,Garrett Smith,Add guidance
+Typescript ,Adopt,"Languages, Frameworks & Platforms",FALSE,A typed superset of the JavaScript language. Improves runtime safety at the expense of a stricter development process.,PDLG,Garrett Smith,Front end review
 ECMAscript 6+,Adopt,"Languages, Frameworks & Platforms",FALSE,"The modern JavaScript language. Including modules, classes, and many other syntax additions.",PDLG,Garrett Smith,Front end review
 .NET Core 3.1,Adopt,"Languages, Frameworks & Platforms",FALSE,.NET Core 3.1 is the latest release and is fully supported by Microsoft.,PDLG,,Add docs in product excellence repo
 .NET Standard 2.0,Adopt,"Languages, Frameworks & Platforms",FALSE,,PDLG,,Review description
-Azure Table Storage,Assess,Tools,TRUE,"Table Storage has been widely used by many dev teams. However, it is still not a good fit for some usage patterns.",Database Architect,Kelvin Schmalle,Update docs with concerns RE: DR and scale limits
+Azure Table Storage,Assess,Tools,FALSE,"Table Storage has been widely used by many dev teams. However, it is still not a good fit for some usage patterns.",Database Architect,Kelvin Schmalle,Update docs with concerns RE: DR and scale limits
 Foundation Messaging,Hold,Tools,FALSE,"Foundation Messaging is an internally-developed library for interacting with Azure Service Bus. It encourages recommended patterns for writing messaging-oriented applications, and is designed to discourage the use of dangerous anti-patterns. Its use also helps ensure that iQmetrix applications use common standards for message serializiation, making it easier for applications to send messages to each other.  It is a .Net Framework only libarary.",PDLG,,
 IQ.Messaging,Adopt,Tools,FALSE,,PDLG,Scott S,Link to docs
 Azure Key Vault,Adopt,Tools,FALSE,"Storing secrets unencrypted on disk (e.g. in web.config or appsettings.json files) is poor practice, and in some cases explicitly forbidden by contractual obligations. Azure Key Vault is a secure mechanism for storing secrets needed by applications. ",PDLG,,Move to TechOps
@@ -51,18 +51,18 @@ Managed Service Identity,Adopt,Tools,FALSE,See https://github.com/iQmetrix/produ
 IQ.RestClient,Adopt,Tools,FALSE,"IQ.RestClient is an abstraction over HttpClient which encourages and facilitates making Http calls in a responsible and resiliant fashion using circuit breakers, bulkheading and aggressive timeout mechanisms. It also makes Auth service token caching and management easy.",PDLG,Scott S,"Review what we're doing with this, is it a supported tool"
 Azure App Services,Hold,"Languages, Frameworks & Platforms",FALSE,"With our investment into Docker and Kubernetes, it is no longer recommended to host services in Azure App Services.",SRE Platform Hosting,,Needs champion
 F#,Hold,"Languages, Frameworks & Platforms",FALSE,,PDLG,,Needs new description
-NewRelic,Assess,Tools,TRUE,New Relic is extensively used at iQmetrix for API performance monitoring and alerting.,SRE Observability,,Pending decision on common O11y tools
+NewRelic,Assess,Tools,FALSE,New Relic is extensively used at iQmetrix for API performance monitoring and alerting.,SRE Observability,,Pending decision on common O11y tools
 Docker,Adopt,Tools,FALSE,,SRE Platform Hosting,,
 Kubernetes (k8s),Adopt,Tools,FALSE,,SRE Platform Hosting,,
 Loggly,Adopt,Tools,FALSE,Loggly is a SaaS log aggregator in heavy use at iQmetrix.,SRE Observability,,
 TeamCity,Hold,Tools,FALSE,Teams are encouraged to use Azure DevOps for new projects. Existing processes can remain in TeamCity.,SRE Embedded,,
 RQ Sproc Bridge Service,Assess,Tools,FALSE,"The RQ Sproc Bridge Service allows code from outside RQ to call sprocs within the RQ Database. The sprocs should be created outside the dbo namespace, and are written, owned, and maintained by the team that calls them. Data that is accessed from a service via Sproc Bridge should be data that the service intends to own one day. These sprocs should be viewed as a temporary measure; calls to the Sproc Bridge Service should eventually be replaced by the service owning the data itself.",PDLG,Andrew K,Link to policy
-Cassandra DB,Trial,Tools,TRUE,,Database Architect,Kelvin Schmalle,
-Kafka,Trial,Tools,TRUE,,Database Architect,Kelvin Schmalle,Add/update docs on assessment
+Cassandra DB,Trial,Tools,FALSE,,Database Architect,Kelvin Schmalle,
+Kafka,Trial,Tools,FALSE,,Database Architect,Kelvin Schmalle,Add/update docs on assessment
 Azure DevOps,Adopt,Tools,FALSE,"Azure DevOps combines source control, work item tracking, build and deploy, scrum tools, and more. See <a href=""https://github.com/iQmetrix/product-excellence/tree/master/devops"">Azure Devops Documentation</a>.",SRE Embedded,Dan Schroeder,
 Service Broker,Hold,Tools,FALSE,Use of SQL Service Broker to communicate out of the DC to Azure,Database Architect,Kelvin Schmalle,This should no longer be used 
-Data Lakes,Trial,Patterns & Techniques,TRUE,,Database Architect,Kelvin Schmalle,Add notes 
-Azure Event Hub,Trial,Tools,TRUE,,Database Architect,Kelvin Schmalle,Add notes 
+Data Lakes,Trial,Patterns & Techniques,FALSE,,Database Architect,Kelvin Schmalle,Add notes 
+Azure Event Hub,Trial,Tools,FALSE,,Database Architect,Kelvin Schmalle,Add notes 
 Power BI for External Reporting,Assess,Tools,FALSE,,Database Architect,Kelvin Schmalle,
 SSRS,Adopt,Tools,FALSE,,Database Architect,Kelvin Schmalle,
 SSAS,Adopt,Tools,FALSE,,Database Architect,Kelvin Schmalle,
@@ -70,12 +70,12 @@ SSIS,Adopt,Tools,FALSE,,Database Architect,Kelvin Schmalle,TBD
 GitHub,Adopt,Tools,FALSE,"GitHub is widely used and we have no plans to abandon it, though Azure DevOps is cool too 🤷‍♀️",ETS,,
 CQS,Adopt,Patterns & Techniques,FALSE,"The <a href=""https://martinfowler.com/bliki/CommandQuerySeparation.html"">Command Query Separation</a> pattern is fundamentally about keeping queries side-effect free, ie: asking a question shouldn't change the answer. This principle aims to keep interfaces simple and the consequences of calling a method obvious.",PDLG,Andrew K,
 IQ.Vanilla CQS AOP,Hold,"Languages, Frameworks & Platforms",FALSE,"Libraries such as <a href=""https://github.com/iQmetrix/IQ.Vanilla.CQS.AOP"">IQ.Vanilla.CQS.AOP</a> and <a href=""https://github.com/RyanMarcotte/Functional.CQS"">Functional.CQS</a> have been found to provide limited benefit and increased complexity. Unless you clearly need the benefits of Aspect Oriented Programming, consider instead creating simple and clear interfaces following the CQS principle.",PDLG,Andrew K,
-Azure App Insights,Assess,Tools,TRUE,O11y for Azure,SRE Observability,,Pending decision on common O11y tools
-Azure DevOps Pipelines,Adopt,Tools,TRUE,"Pipelines and Releases are Microsoft's ""classic"" way of doing builds and deploys. Microsoft includes trigger support for repos in Azure DevOps and Github. <a href=""https://github.com/iQmetrix/product-excellence/blob/master/devops/buildanddeploy.md"">Build and Deploy Guides</a>",SRE Embedded,,
-Azure DevOps YAML Pipelines,Trial,Tools,TRUE,"YAML pipelines are Microsoft's next generation way of doing builds and deploys. YAML pipelines still lack some important features, but in the long term they look very promising. <a href=""https://github.com/iQmetrix/product-excellence/blob/master/devops/buildanddeploy.md"">Build and Deploy Guides</a>",SRE Embedded,,
-Appium + WinApp driver,Assess,Tools,TRUE,Windows UI Test automation,PDLG,,
-Cypress,Assess,Tools,TRUE,Browser UI Test automation,PDLG,,
-Detox,Assess,Tools,TRUE,Mobile UI Test automation,PDLG,,
-Google Analytics,Assess,Tools,TRUE,Web/Mobile Application analytics,Product & Tech,,
-Power BI for Internal Analytics,Trial,Tools,TRUE,RQ client metrics analysis,PDLG,,
-Functional Patterns in C#,Adopt,Patterns & Techniques,TRUE,"The Option, Result, and Discriminated Union patterns provided by the <a href=""https://github.com/JohannesMoersch/Functional"">Functional</a> library for C# help to avoid improperly handled null references or using exceptions to model failure",PDLG,Johannes Moersch,
+Azure App Insights,Assess,Tools,FALSE,O11y for Azure,SRE Observability,,Pending decision on common O11y tools
+Azure DevOps Pipelines,Adopt,Tools,FALSE,"Pipelines and Releases are Microsoft's ""classic"" way of doing builds and deploys. Microsoft includes trigger support for repos in Azure DevOps and Github. <a href=""https://github.com/iQmetrix/product-excellence/blob/master/devops/buildanddeploy.md"">Build and Deploy Guides</a>",SRE Embedded,,
+Azure DevOps YAML Pipelines,Trial,Tools,FALSE,"YAML pipelines are Microsoft's next generation way of doing builds and deploys. YAML pipelines still lack some important features, but in the long term they look very promising. <a href=""https://github.com/iQmetrix/product-excellence/blob/master/devops/buildanddeploy.md"">Build and Deploy Guides</a>",SRE Embedded,,
+Appium + WinApp driver,Assess,Tools,FALSE,Windows UI Test automation,PDLG,,
+Cypress,Assess,Tools,FALSE,Browser UI Test automation,PDLG,,
+Detox,Assess,Tools,FALSE,Mobile UI Test automation,PDLG,,
+Google Analytics,Assess,Tools,FALSE,Web/Mobile Application analytics,Product & Tech,,
+Power BI for Internal Analytics,Trial,Tools,FALSE,RQ client metrics analysis,PDLG,,
+Functional Patterns in C#,Adopt,Patterns & Techniques,FALSE,"The Option, Result, and Discriminated Union patterns provided by the <a href=""https://github.com/JohannesMoersch/Functional"">Functional</a> library for C# help to avoid improperly handled null references or using exceptions to model failure",PDLG,Johannes Moersch,
