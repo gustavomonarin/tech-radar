@@ -17,7 +17,7 @@ MSSQL Server in the data center,Adopt,Tools,FALSE,Microsoft SQL is the primary s
 Managed Instance SQL Server,Adopt,Tools,FALSE,[update me] Microsoft SQL hosted on azure VMs is no longer the recommended approach to hosting SQL databases in azure.,Kelvin Schmalle,Update description
 Azure Application Insights Custom Events,Assess,Tools,FALSE,Application Insights custom events promise to collect custom usage data at very low cost. It has options for custom alerting.,,Pending decision on standard O11y tools
 Custom eventing,Adopt,Patterns & Techniques,FALSE,,,
-Figma,Adopt,Tools,FALSE,,,
+Figma,Adopt,Tools,FALSE,"A collaborative web-based vector editor and UX design tool",,
 Accessibility Standards,Adopt,Patterns & Techniques,FALSE,Products should be usable and useful to everyone despite any disabilities they may have. Check the Design Discipline Playbook for some resources on designing for colour blindness and other disabilities.,,
 Failover testing,Adopt,Patterns & Techniques,FALSE,"Failover tests independent of a current issue or incident allows for confidence in the environment's ability to withstand an event, and ensure people respond to the events appropriately.",Jeff E,
 npm,Adopt,Tools,FALSE,A popular JavaScript package manager. This should be the standard for managing a JS projects dependencies.,Garrett Smith,Front end review
@@ -73,9 +73,9 @@ Detox,Assess,Tools,FALSE,Mobile UI Test automation,,
 Google Analytics,Assess,Tools,FALSE,Web/Mobile Application analytics,,
 Power BI for Internal Analytics,Adopt,Tools,TRUE,Using PowerBI for internal to IQ Data Analysis needs is encouraged.  Using it for external customer facing needs faces licensing and other issues and is still being Assessed.,Kelvin Schmalle,
 Functional Patterns in C#,Adopt,Tools,FALSE,"The Option, Result, and Discriminated Union patterns provided by the <a href=""https://github.com/JohannesMoersch/Functional"">Functional</a> library for C# help to avoid improperly handled null references or using exceptions to model failure",Andrew K,
-Sentry,Adopt,Tools,TRUE,Error logging and tracking for front end applications,,
-Web in RQ,Trial,Patterns & Techniques,TRUE,,Garrett Smith,
-Design System,Adopt,Patterns & Techniques,TRUE,,Garrett Smith,
+Sentry,Adopt,Tools,TRUE,"Error and performance monitoring tool used for web applications",,
+Web in RQ,Trial,Patterns & Techniques,TRUE,"A collection to libraries and techniques used to embed web applications into RQ",Garrett Smith,
+Design System,Adopt,Patterns & Techniques,TRUE,"A collection of patterns and components used to design application interfaces",Garrett Smith,
 Taurus,Trial,Tools,TRUE,Load testing tool,Kelvin Schmalle,
 Locust,Trial,Tools,TRUE,Load testing tool,Kelvin Schmalle,
 Overops,Adopt,Tools,TRUE,Error logging and tracking for RQ services,Kelvin Schmalle,
