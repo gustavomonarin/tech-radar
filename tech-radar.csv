@@ -1,81 +1,94 @@
-name,ring,quadrant,isNew,description,discipline circle,champion,notes
-Azure SQL Database,Hold,Tools,FALSE,Azure SQL Database is an adaptation of Microsoft SQL server to the cloud infrastructure. ,Database Architect,Kelvin Schmalle,
-Event Storming,Trial,Agile & Team Practices,FALSE,,PDLG,Andrew K,"Remove this, maybe, very few items in Agile & Team Practices"
-Single-instance message processors,Hold,Patterns & Techniques,FALSE,"Limiting message processing to a single thread can be alluring when the goal is to eliminate duplicate and out-of-order messages. In practice, it reduces their frequency but does not eliminate them, and limits scalability and resiliency. Message processors should strive to be idempotent and tolerant of out-of-order messages.",PDLG,,Archive
-Graphite,Adopt,Tools,FALSE,https://github.com/iQmetrix/product-excellence/blob/master/monitoring-and-alerting/graphite.md,SRE Observability,,Jeff Eggen to find chamption. Docs need updating
-In order message processing,Hold,Patterns & Techniques,FALSE,Forcing messages to be processed in the exact order they were published causes many problems for systems processing messages. Message processors should be flexible enough to accept messages out of order to ensure high availability and throughput.,PDLG,,Maybe merge with next one and single instance above
-Exactly once message delivery,Hold,Patterns & Techniques,FALSE,"Most messaging systems that provide guaranteed delivery, including Azure Service Bus, will deliver messages multiple times in certain circumstances. Instead of attempting to force messages to be processed exactly once, message processors should be designed to be idempotent.",PDLG,,Maybe merge with prev one and single instance above
-Aha,Adopt,Agile & Team Practices,FALSE,,PMLG,Lauren Wilmsen,"Find champion, add docs"
-Outbox pattern,Adopt,Patterns & Techniques,FALSE,The Outbox pattern allows a service to atomically publish messages without being temporally coupled to the messaging system. There is also tooling support for this pattern using the Foundation.Outbox Nuget package.,PDLG,Scott S,Add docs
-Redis,Adopt,Tools,FALSE,Redis is commmonly used as distributed cache.,PDLG,Scott S,Add/link to docs
-MongoDB,Adopt,Tools,FALSE,,Database Architect,Kelvin Schmalle,Link to docs
-Client Libraries,Assess,Patterns & Techniques,FALSE,"Owners of a service implement official client library(ies) to access their service in an effecient, fault tolerant manner.",PDLG,Scott S,Maybe split for reasons why to use a client library and not use a client library
-Auto incrementing Integer Ids,Hold,Patterns & Techniques,FALSE,Auto incrementing integer ids are introduct difficulties during fail-over or multi-writer distributed scenarios.  They also complicate developing against non-prod systems and data sharding.,PDLG,Scott S,"Review description, what's the alternative?"
-Azure Cosmos DB,Hold,Tools,FALSE,"CosmosDB has been found to be useful in some limited cases, but it's still way too expensive.",Database Architect,Kelvin Schmalle,Update w/ some details on good and poor usages in PE 
-Azure Functions,Adopt,"Languages, Frameworks & Platforms",FALSE,"Azure Functions is Azure's answer to serverless computing.  Using ASB triggers and Consumption plans, Azure Functions is a promising alternative to webJobs for low cost high scaling ASB message processing, as well as other short lived jobs. <a href=""https://github.com/iQmetrix/product-excellence/blob/master/tech-radar/languages-frameworks-platforms/functions-guidance.md"">See function guidance</a>.",PDLG,,
-MSSQL Server in the data center,Adopt,Tools,FALSE,Microsoft SQL is the primary supported RDBMS for relational database needs hosted in the Datacentres.,Database Architect,Kelvin Schmalle,Link to docs if we have them
-Managed Instance SQL Server,Adopt,Tools,FALSE,[update me] Microsoft SQL hosted on azure VMs is no longer the recommended approach to hosting SQL databases in azure.,Database Architect,Kelvin Schmalle,Update description
-Azure Application Insights Custom Events,Assess,Tools,FALSE,Application Insights custom events promise to collect custom usage data at very low cost. It has options for custom alerting.,SRE Observability,,Pending decision on standard O11y tools
-Custom eventing,Adopt,Patterns & Techniques,FALSE,,SRE Observability,,
-Figma,Adopt,Tools,FALSE,,Design,,
-Accessibility Standards,Adopt,Patterns & Techniques,FALSE,Products should be usable and useful to everyone despite any disabilities they may have. Check the Design Discipline Playbook for some resources on designing for colour blindness and other disabilities.,Design,,
-Canary releases,Trial,Patterns & Techniques,FALSE,,SRE,Jeff E,Add notes around current RQ trial of this
-Failover testing,Adopt,Patterns & Techniques,FALSE,"Failover tests independent of a current issue or incident allows for confidence in the environment's ability to withstand an event, and ensure people respond to the events appropriately.",SRE,Jeff E,
-npm,Adopt,Tools,FALSE,A popular JavaScript package manager. This should be the standard for managing a JS projects dependencies.,PDLG,Garrett Smith,Front end review
-Yarn,Adopt,Tools,TRUE,An alternative JavaScript packages manager. In some cases it has additional features that make it useful but npm should be preferred in general.,PDLG,Garrett Smith,Front end review
-React,Adopt,"Languages, Frameworks & Platforms",TRUE,A JavaScript component based UI library. New web apps should consider this the default choice for developing new projects.,PDLG,Garrett Smith,Front end review
-Angular,Hold,"Languages, Frameworks & Platforms",TRUE,A JavaScript platform for web applications. ,PDLG,Garrett Smith,Front end review
-React Native,Assess,"Languages, Frameworks & Platforms",TRUE,A JavaScript  component based UI library for native mobile applications. ,PDLG,Garrett Smith,Front end review
-Ionic,Hold,"Languages, Frameworks & Platforms",TRUE,A platform for JavaScript cross-platform web applications. Based on Angular.,PDLG,Garrett Smith,Front end review
-Backbone + Marionette (Hub v1),Hold,"Languages, Frameworks & Platforms",FALSE,A JavaScript library for RESTful model-view-presenter library and associated web application framework.,PDLG,Garrett Smith,Front end review
-Aurelia (Hub v2),Hold,"Languages, Frameworks & Platforms",FALSE,A JavaScript application framework.,PDLG,Garrett Smith,Front end review
-Gulp,Hold,Tools,FALSE,A JavaScript build system toolkit now largely superseeded by Webpack and npm scripts.,PDLG,Garrett Smith,Front end review
-webpack,Adopt,Tools,TRUE,A JavaScript module bundler used to transform applications into distributable static assets.,PDLG,Garrett Smith,Front end review
-Redux,Assess,"Languages, Frameworks & Platforms",TRUE,A JavaScript flux-inspired application state management library.,PDLG,Garrett Smith,Front end review
-Jade / Pug,Hold,"Languages, Frameworks & Platforms",TRUE,A template engine and language for browsers and NodeJS,PDLG,Garrett Smith,Front end review
-Sass,Assess,"Languages, Frameworks & Platforms",TRUE,A superset language of CSS. Less needed for applications built on the design system components but still useful.,PDLG,Garrett Smith,Front end review
-Monorepo,Adopt,Agile & Team Practices,TRUE,"A software repository pattern where multiple projects are all version controlled within a single repository. This simplifies making changes across multiple repositories, eases code reuse, and improves discoverability, at the cost of more noise and large storage requirements.",PDLG,Garrett Smith,Add guidance
-Typescript ,Adopt,"Languages, Frameworks & Platforms",TRUE,A typed superset of the JavaScript language. Improves runtime safety at the expense of a stricter development process.,PDLG,Garrett Smith,Front end review
-ECMAscript 6+,Adopt,"Languages, Frameworks & Platforms",FALSE,"The modern JavaScript language. Including modules, classes, and many other syntax additions.",PDLG,Garrett Smith,Front end review
-.NET Core 3.1,Adopt,"Languages, Frameworks & Platforms",FALSE,.NET Core 3.1 is the latest release and is fully supported by Microsoft.,PDLG,,Add docs in product excellence repo
-.NET Standard 2.0,Adopt,"Languages, Frameworks & Platforms",FALSE,,PDLG,,Review description
-Azure Table Storage,Assess,Tools,TRUE,"Table Storage has been widely used by many dev teams. However, it is still not a good fit for some usage patterns.",Database Architect,Kelvin Schmalle,Update docs with concerns RE: DR and scale limits
-Foundation Messaging,Hold,Tools,FALSE,"Foundation Messaging is an internally-developed library for interacting with Azure Service Bus. It encourages recommended patterns for writing messaging-oriented applications, and is designed to discourage the use of dangerous anti-patterns. Its use also helps ensure that iQmetrix applications use common standards for message serializiation, making it easier for applications to send messages to each other.  It is a .Net Framework only libarary.",PDLG,,
-IQ.Messaging,Adopt,Tools,FALSE,,PDLG,Scott S,Link to docs
-Azure Key Vault,Adopt,Tools,FALSE,"Storing secrets unencrypted on disk (e.g. in web.config or appsettings.json files) is poor practice, and in some cases explicitly forbidden by contractual obligations. Azure Key Vault is a secure mechanism for storing secrets needed by applications. ",PDLG,,Move to TechOps
-ASP.NET Core,Adopt,"Languages, Frameworks & Platforms",FALSE,"ASP.NET Core supports both .NET Core and .NET Standard as development platforms, and replaces ASP.Net for most/all purposes.",PDLG,,Review description
-Azure Blob Storage,Adopt,Tools,FALSE,,PDLG,,Review description and owner
-Event Sourcing,Assess,Patterns & Techniques,FALSE,"Event sourcing is a data modeling pattern where all events that led to the current state of a domain aggregate are stored instead of just storing the current state. The events are stored in an immutable and append only data store. Some techniques that this enables are: replaying all previous events when debugging problems, temporal querying where you can see the state of an aggregate at any point in time, replaying all events in order to build a new query projection. Challenges include: the loss of adhoc queryability of data, event versioning issues, problems reloading aggregates with large numbers of events.",PDLG,Andrew K,Update docs around what we are assessing?
-Backend for Frontend pattern,Adopt,Patterns & Techniques,FALSE,A BFF is an API tightly coupled to a specific user experience. See https://samnewman.io/patterns/architectural/bff/,PDLG,Chris Rosney,Review description
-Managed Service Identity,Adopt,Tools,FALSE,See https://github.com/iQmetrix/product-excellence/blob/master/tech-radar/tools/managed-service-identity.md,SRE Platform Hosting,Brant Bobby,
-IQ.RestClient,Adopt,Tools,FALSE,"IQ.RestClient is an abstraction over HttpClient which encourages and facilitates making Http calls in a responsible and resiliant fashion using circuit breakers, bulkheading and aggressive timeout mechanisms. It also makes Auth service token caching and management easy.",PDLG,Scott S,"Review what we're doing with this, is it a supported tool"
-Azure App Services,Hold,"Languages, Frameworks & Platforms",FALSE,"With our investment into Docker and Kubernetes, it is no longer recommended to host services in Azure App Services.",SRE Platform Hosting,,Needs champion
-F#,Hold,"Languages, Frameworks & Platforms",FALSE,,PDLG,,Needs new description
-NewRelic,Assess,Tools,TRUE,New Relic is extensively used at iQmetrix for API performance monitoring and alerting.,SRE Observability,,Pending decision on common O11y tools
-Docker,Adopt,Tools,FALSE,,SRE Platform Hosting,,
-Kubernetes (k8s),Adopt,Tools,FALSE,,SRE Platform Hosting,,
-Loggly,Adopt,Tools,FALSE,Loggly is a SaaS log aggregator in heavy use at iQmetrix.,SRE Observability,,
-TeamCity,Hold,Tools,FALSE,Teams are encouraged to use Azure DevOps for new projects. Existing processes can remain in TeamCity.,SRE Embedded,,
-RQ Sproc Bridge Service,Assess,Tools,FALSE,"The RQ Sproc Bridge Service allows code from outside RQ to call sprocs within the RQ Database. The sprocs should be created outside the dbo namespace, and are written, owned, and maintained by the team that calls them. Data that is accessed from a service via Sproc Bridge should be data that the service intends to own one day. These sprocs should be viewed as a temporary measure; calls to the Sproc Bridge Service should eventually be replaced by the service owning the data itself.",PDLG,Andrew K,Link to policy
-Cassandra DB,Trial,Tools,TRUE,,Database Architect,Kelvin Schmalle,
-Kafka,Trial,Tools,TRUE,,Database Architect,Kelvin Schmalle,Add/update docs on assessment
-Azure DevOps,Adopt,Tools,FALSE,"Azure DevOps combines source control, work item tracking, build and deploy, scrum tools, and more. See <a href=""https://github.com/iQmetrix/product-excellence/tree/master/devops"">Azure Devops Documentation</a>.",SRE Embedded,Dan Schroeder,
-Service Broker,Hold,Tools,FALSE,Use of SQL Service Broker to communicate out of the DC to Azure,Database Architect,Kelvin Schmalle,This should no longer be used 
-Data Lakes,Trial,Patterns & Techniques,TRUE,,Database Architect,Kelvin Schmalle,Add notes 
-Azure Event Hub,Trial,Tools,TRUE,,Database Architect,Kelvin Schmalle,Add notes 
-Power BI for External Reporting,Assess,Tools,FALSE,,Database Architect,Kelvin Schmalle,
-SSRS,Adopt,Tools,FALSE,,Database Architect,Kelvin Schmalle,
-SSAS,Adopt,Tools,FALSE,,Database Architect,Kelvin Schmalle,
-SSIS,Adopt,Tools,FALSE,,Database Architect,Kelvin Schmalle,TBD
-GitHub,Adopt,Tools,FALSE,"GitHub is widely used and we have no plans to abandon it, though Azure DevOps is cool too 🤷‍♀️",ETS,,
-CQS,Adopt,Patterns & Techniques,FALSE,"The <a href=""https://martinfowler.com/bliki/CommandQuerySeparation.html"">Command Query Separation</a> pattern is fundamentally about keeping queries side-effect free, ie: asking a question shouldn't change the answer. This principle aims to keep interfaces simple and the consequences of calling a method obvious.",PDLG,Andrew K,
-IQ.Vanilla CQS AOP,Hold,"Languages, Frameworks & Platforms",FALSE,"Libraries such as <a href=""https://github.com/iQmetrix/IQ.Vanilla.CQS.AOP"">IQ.Vanilla.CQS.AOP</a> and <a href=""https://github.com/RyanMarcotte/Functional.CQS"">Functional.CQS</a> have been found to provide limited benefit and increased complexity. Unless you clearly need the benefits of Aspect Oriented Programming, consider instead creating simple and clear interfaces following the CQS principle.",PDLG,Andrew K,
-Azure App Insights,Assess,Tools,TRUE,O11y for Azure,SRE Observability,,Pending decision on common O11y tools
-Azure DevOps Pipelines,Adopt,Tools,TRUE,"Pipelines and Releases are Microsoft's ""classic"" way of doing builds and deploys. Microsoft includes trigger support for repos in Azure DevOps and Github. <a href=""https://github.com/iQmetrix/product-excellence/blob/master/devops/buildanddeploy.md"">Build and Deploy Guides</a>",SRE Embedded,,
-Azure DevOps YAML Pipelines,Trial,Tools,TRUE,"YAML pipelines are Microsoft's next generation way of doing builds and deploys. YAML pipelines still lack some important features, but in the long term they look very promising. <a href=""https://github.com/iQmetrix/product-excellence/blob/master/devops/buildanddeploy.md"">Build and Deploy Guides</a>",SRE Embedded,,
-Appium + WinApp driver,Assess,Tools,TRUE,Windows UI Test automation,PDLG,,
-Cypress,Assess,Tools,TRUE,Browser UI Test automation,PDLG,,
-Detox,Assess,Tools,TRUE,Mobile UI Test automation,PDLG,,
-Google Analytics,Assess,Tools,TRUE,Web/Mobile Application analytics,Product & Tech,,
-Power BI for Internal Analytics,Trial,Tools,TRUE,RQ client metrics analysis,PDLG,,
-Functional Patterns in C#,Adopt,Patterns & Techniques,TRUE,"The Option, Result, and Discriminated Union patterns provided by the <a href=""https://github.com/JohannesMoersch/Functional"">Functional</a> library for C# help to avoid improperly handled null references or using exceptions to model failure",PDLG,Johannes Moersch,
+name,ring,quadrant,isNew,description,champion,notes
+Azure SQL Database,Hold,Tools,FALSE,Azure SQL Database is an adaptation of Microsoft SQL server to the cloud infrastructure. ,Kelvin Schmalle,
+Event Storming,Adopt,Agile & Team Practices,TRUE,,Andrew K,
+Single-instance message processors,Hold,Patterns & Techniques,FALSE,"Limiting message processing to a single thread can be alluring when the goal is to eliminate duplicate and out-of-order messages. In practice, it reduces their frequency but does not eliminate them, and limits scalability and resiliency. Message processors should strive to be idempotent and tolerant of out-of-order messages.",,Need details explaining the streaming (kafka) approach vs the ASB/IQ.M approach
+Graphite,Adopt,Tools,FALSE,https://github.com/iQmetrix/product-excellence/blob/master/monitoring-and-alerting/graphite.md,,Jeff Eggen to find chamption. Docs need updating
+In order message processing,Hold,Patterns & Techniques,FALSE,Forcing messages to be processed in the exact order they were published causes many problems for systems processing messages. Message processors should be flexible enough to accept messages out of order to ensure high availability and throughput.,,Need details explaining the streaming (kafka) approach vs the ASB/IQ.M approach
+Exactly once message delivery,Hold,Patterns & Techniques,FALSE,"Most messaging systems that provide guaranteed delivery, including Azure Service Bus, will deliver messages multiple times in certain circumstances. Instead of attempting to force messages to be processed exactly once, message processors should be designed to be idempotent.",,Need details explaining the streaming (kafka) approach vs the ASB/IQ.M approach
+Aha,Adopt,Agile & Team Practices,FALSE,,Lauren Wilmsen,
+Outbox pattern,Adopt,Patterns & Techniques,FALSE,The Outbox pattern allows a service to atomically publish messages without being temporally coupled to the messaging system. There is also tooling support for this pattern using the Foundation.Outbox Nuget package.,Scott S,Add docs
+Redis,Adopt,Tools,FALSE,Redis is commmonly used as distributed cache.,Scott S,Add/link to docs
+MongoDB,Adopt,Tools,FALSE,,Kelvin Schmalle,Link to docs
+Client Libraries,Assess,Patterns & Techniques,FALSE,"Owners of a service implement official client library(ies) to access their service in an effecient, fault tolerant manner.",Scott S,Maybe split for reasons why to use a client library and not use a client library
+Auto incrementing Integer Ids,Hold,Patterns & Techniques,FALSE,Auto incrementing integer ids are introduct difficulties during fail-over or multi-writer distributed scenarios.  They also complicate developing against non-prod systems and data sharding.,Scott S,"Review description, what's the alternative?"
+Azure Cosmos DB,Hold,Tools,FALSE,"CosmosDB has been found to be useful in some limited cases, but it's still way too expensive.",Kelvin Schmalle,Update w/ some details on good and poor usages in PE 
+Azure Functions,Adopt,"Languages, Frameworks & Platforms",FALSE,"Azure Functions is Azure's answer to serverless computing.  Using ASB triggers and Consumption plans, Azure Functions is a promising alternative to webJobs for low cost high scaling ASB message processing, as well as other short lived jobs. <a href=""https://github.com/iQmetrix/product-excellence/blob/master/tech-radar/languages-frameworks-platforms/functions-guidance.md"">See function guidance</a>.",,
+MSSQL Server in the data center,Adopt,Tools,FALSE,Microsoft SQL is the primary supported RDBMS for relational database needs hosted in the Datacentres.,Kelvin Schmalle,Link to docs if we have them
+Managed Instance SQL Server,Adopt,Tools,FALSE,[update me] Microsoft SQL hosted on azure VMs is no longer the recommended approach to hosting SQL databases in azure.,Kelvin Schmalle,Update description
+Azure Application Insights Custom Events,Assess,Tools,FALSE,Application Insights custom events promise to collect custom usage data at very low cost. It has options for custom alerting.,,Pending decision on standard O11y tools
+Custom eventing,Adopt,Patterns & Techniques,FALSE,,,
+Figma,Adopt,Tools,FALSE,,,
+Accessibility Standards,Adopt,Patterns & Techniques,FALSE,Products should be usable and useful to everyone despite any disabilities they may have. Check the Design Discipline Playbook for some resources on designing for colour blindness and other disabilities.,,
+Failover testing,Adopt,Patterns & Techniques,FALSE,"Failover tests independent of a current issue or incident allows for confidence in the environment's ability to withstand an event, and ensure people respond to the events appropriately.",Jeff E,
+npm,Adopt,Tools,FALSE,A popular JavaScript package manager. This should be the standard for managing a JS projects dependencies.,Garrett Smith,Front end review
+Yarn,Adopt,Tools,FALSE,An alternative JavaScript packages manager. In some cases it has additional features that make it useful but npm should be preferred in general.,Garrett Smith,Front end review
+React,Adopt,"Languages, Frameworks & Platforms",FALSE,A JavaScript component based UI library. New web apps should consider this the default choice for developing new projects.,Garrett Smith,Front end review
+React Native,Assess,"Languages, Frameworks & Platforms",FALSE,A JavaScript  component based UI library for native mobile applications. ,Garrett Smith,Front end review
+Backbone + Marionette (Hub v1),Hold,"Languages, Frameworks & Platforms",FALSE,A JavaScript library for RESTful model-view-presenter library and associated web application framework.,Garrett Smith,Front end review
+Aurelia (Hub v2),Hold,"Languages, Frameworks & Platforms",FALSE,A JavaScript application framework.,Garrett Smith,Front end review
+webpack,Adopt,Tools,FALSE,A JavaScript module bundler used to transform applications into distributable static assets.,Garrett Smith,Front end review
+Redux,Assess,"Languages, Frameworks & Platforms",FALSE,A JavaScript flux-inspired application state management library.,Garrett Smith,Front end review
+Sass,Assess,"Languages, Frameworks & Platforms",FALSE,A superset language of CSS. Less needed for applications built on the design system components but still useful.,Garrett Smith,Front end review
+Monorepo,Adopt,Agile & Team Practices,FALSE,"A software repository pattern where multiple projects are all version controlled within a single repository. This simplifies making changes across multiple repositories, eases code reuse, and improves discoverability, at the cost of more noise and large storage requirements.",Garrett Smith,Add guidance
+Typescript ,Adopt,"Languages, Frameworks & Platforms",FALSE,A typed superset of the JavaScript language. Improves runtime safety at the expense of a stricter development process.,Garrett Smith,Front end review
+ECMAscript 6+,Hold,"Languages, Frameworks & Platforms",TRUE,"The modern JavaScript language. Including modules, classes, and many other syntax additions.",Garrett Smith,Front end review
+.NET Core 3.1,Adopt,"Languages, Frameworks & Platforms",FALSE,.NET Core 3.1 is the latest release and is fully supported by Microsoft.,,Add docs in product excellence repo
+.NET Standard 2.1,Adopt,"Languages, Frameworks & Platforms",FALSE,,,
+Azure Table Storage,Assess,Tools,FALSE,"Table Storage has been widely used by many dev teams. However, it is still not a good fit for some usage patterns.",Kelvin Schmalle,Update docs with concerns RE: DR and scale limits
+Foundation Messaging,Hold,Tools,FALSE,"Foundation Messaging is an internally-developed library for interacting with Azure Service Bus. It encourages recommended patterns for writing messaging-oriented applications, and is designed to discourage the use of dangerous anti-patterns. Its use also helps ensure that iQmetrix applications use common standards for message serializiation, making it easier for applications to send messages to each other.  It is a .Net Framework only libarary.",,
+IQ.Messaging,Adopt,Tools,FALSE,,Scott S,Link to docs
+Azure Key Vault,Adopt,Tools,FALSE,"Storing secrets unencrypted on disk (e.g. in web.config or appsettings.json files) is poor practice, and in some cases explicitly forbidden by contractual obligations. Azure Key Vault is a secure mechanism for storing secrets needed by applications. ",,Move to TechOps
+ASP.NET Core,Adopt,"Languages, Frameworks & Platforms",FALSE,"ASP.NET Core supports both .NET Core and .NET Standard as development platforms, and replaces ASP.Net for most/all purposes.",,Review description
+Azure Blob Storage,Adopt,Tools,FALSE,,,Review description and owner
+Event Sourcing,Assess,Patterns & Techniques,FALSE,"Event sourcing is a data modeling pattern where all events that led to the current state of a domain aggregate are stored instead of just storing the current state. The events are stored in an immutable and append only data store. Some techniques that this enables are: replaying all previous events when debugging problems, temporal querying where you can see the state of an aggregate at any point in time, replaying all events in order to build a new query projection. Challenges include: the loss of adhoc queryability of data, event versioning issues, problems reloading aggregates with large numbers of events.",Andrew K,Update docs around what we are assessing?
+Backend for Frontend pattern,Adopt,Patterns & Techniques,FALSE,A BFF is an API tightly coupled to a specific user experience. See https://samnewman.io/patterns/architectural/bff/,Chris Rosney,Review description
+Managed Service Identity,Adopt,Tools,FALSE,See https://github.com/iQmetrix/product-excellence/blob/master/tech-radar/tools/managed-service-identity.md,Brant Bobby,
+IQ.RestClient,Hold,Tools,TRUE,IQ.RestClient is an unsopported library which has mostly been replaced by modern ASP.Net Core capabilities for retry and other reliability patterns.,Scott S,
+Azure App Services,Hold,"Languages, Frameworks & Platforms",FALSE,"With our investment into Docker and Kubernetes, it is no longer recommended to host services in Azure App Services.",,Needs champion
+F#,Hold,"Languages, Frameworks & Platforms",FALSE,"Functional techniques of immutability, pattern matching etc. are great.  We are not widely tooled up to support F# development and have no intention of broadly supporting it across teams.",,Needs new description
+NewRelic,Assess,Tools,FALSE,New Relic is extensively used at iQmetrix for API performance monitoring and alerting.,,Pending decision on common O11y tools
+Docker,Adopt,Tools,FALSE,,,
+Kubernetes (k8s),Adopt,Tools,FALSE,,,
+Loggly,Adopt,Tools,FALSE,Loggly is a SaaS log aggregator in heavy use at iQmetrix.,,
+TeamCity,Hold,Tools,FALSE,Teams are encouraged to use Azure DevOps for new projects. Existing processes can remain in TeamCity.,,
+RQ Sproc Bridge Service,Assess,Tools,FALSE,"The RQ Sproc Bridge Service allows code from outside RQ to call sprocs within the RQ Database. The sprocs should be created outside the dbo namespace, and are written, owned, and maintained by the team that calls them. Data that is accessed from a service via Sproc Bridge should be data that the service intends to own one day. These sprocs should be viewed as a temporary measure; calls to the Sproc Bridge Service should eventually be replaced by the service owning the data itself.",Andrew K,Link to policy
+Kafka,Adopt,Tools,TRUE,,Kelvin Schmalle,Add/update docs on assessment
+Azure DevOps,Adopt,Tools,FALSE,"Azure DevOps combines source control, work item tracking, build and deploy, scrum tools, and more. See <a href=""https://github.com/iQmetrix/product-excellence/tree/master/devops"">Azure Devops Documentation</a>.",Dan Schroeder,
+Service Broker,Hold,Tools,FALSE,Use of SQL Service Broker to communicate out of the DC to Azure,Kelvin Schmalle,This should no longer be used 
+Data Lakes,Adopt,Patterns & Techniques,TRUE,,Kelvin Schmalle,Add notes 
+Azure Event Hub,Trial,Tools,FALSE,,Kelvin Schmalle,Add notes 
+Power BI for External Reporting,Assess,Tools,FALSE,,Kelvin Schmalle,
+SSRS,Adopt,Tools,FALSE,,Kelvin Schmalle,
+SSAS,Adopt,Tools,FALSE,,Kelvin Schmalle,
+SSIS,Adopt,Tools,FALSE,,Kelvin Schmalle,TBD
+GitHub,Hold,Tools,TRUE,Create all new repos in Azure DevOps.  GitHub is widely used and we have no plans to abandon it.  We are almost at the repo cap and will not be paying for more capacity.,,
+CQS,Adopt,Patterns & Techniques,FALSE,"The <a href=""https://martinfowler.com/bliki/CommandQuerySeparation.html"">Command Query Separation</a> pattern is fundamentally about keeping queries side-effect free, ie: asking a question shouldn't change the answer. This principle aims to keep interfaces simple and the consequences of calling a method obvious.",Andrew K,
+IQ.Vanilla CQS AOP,Hold,"Languages, Frameworks & Platforms",FALSE,"Libraries such as <a href=""https://github.com/iQmetrix/IQ.Vanilla.CQS.AOP"">IQ.Vanilla.CQS.AOP</a> and <a href=""https://github.com/RyanMarcotte/Functional.CQS"">Functional.CQS</a> have been found to provide limited benefit and increased complexity. Unless you clearly need the benefits of Aspect Oriented Programming, consider instead creating simple and clear interfaces following the CQS principle.",Andrew K,
+Azure App Insights,Assess,Tools,FALSE,O11y for Azure,,Pending decision on common O11y tools
+Azure DevOps Pipelines,Adopt,Tools,FALSE,"Pipelines and Releases are Microsoft's ""classic"" way of doing builds and deploys. Microsoft includes trigger support for repos in Azure DevOps and Github. <a href=""https://github.com/iQmetrix/product-excellence/blob/master/devops/buildanddeploy.md"">Build and Deploy Guides</a>",,
+Azure DevOps YAML Pipelines,Trial,Tools,FALSE,"YAML pipelines are Microsoft's next generation way of doing builds and deploys. YAML pipelines still lack some important features, but in the long term they look very promising. <a href=""https://github.com/iQmetrix/product-excellence/blob/master/devops/buildanddeploy.md"">Build and Deploy Guides</a>",,
+Appium + WinApp driver,Assess,Tools,FALSE,Windows UI Test automation,,
+Cypress,Assess,Tools,FALSE,Browser UI Test automation,,
+Detox,Assess,Tools,FALSE,Mobile UI Test automation,,
+Google Analytics,Assess,Tools,FALSE,Web/Mobile Application analytics,,
+Power BI for Internal Analytics,Adopt,Tools,TRUE,Using PowerBI for internal to IQ Data Analysis needs is encouraged.  Using it for external customer facing needs faces licensing and other issues and is still being Assessed.,Kelvin Schmalle,
+Functional Patterns in C#,Adopt,Tools,FALSE,"The Option, Result, and Discriminated Union patterns provided by the <a href=""https://github.com/JohannesMoersch/Functional"">Functional</a> library for C# help to avoid improperly handled null references or using exceptions to model failure",Andrew K,
+Sentry,Adopt,Tools,TRUE,Error logging and tracking for front end applications,,
+Web in RQ,Trial,Patterns & Techniques,TRUE,,Garrett Smith,
+Design System,Adopt,Patterns & Techniques,TRUE,,Garrett Smith,
+Taurus,Trial,Tools,TRUE,Load testing tool,Kelvin Schmalle,
+Locust,Trial,Tools,TRUE,Load testing tool,Kelvin Schmalle,
+Overops,Adopt,Tools,TRUE,Error logging and tracking for RQ services,Kelvin Schmalle,
+Blue/Green deployments,Adopt,Patterns & Techniques,TRUE,,,
+HVR,Adopt,Tools,TRUE,Change data capture logging extraction tool,Kelvin Schmalle,
+Delta Lake,Adopt,Patterns & Techniques,TRUE,Data Lake which allows upserts,Kelvin Schmalle,
+Databricks,Adopt,Tools,TRUE,Processing engind ontop of Data/Delta Lake,Kelvin Schmalle,
+Synapse DW,Trial,Tools,TRUE,Massively Parallel Datawarehouse,Kelvin Schmalle,
+Looker,Assess,Tools,TRUE,Analytics for DnA,Kelvin Schmalle,
+Sisense,Assess,Tools,TRUE,Analytics for DnA,Kelvin Schmalle,
+Tableau,Assess,Tools,TRUE,Analytics for DnA,Kelvin Schmalle,
+Embedded PowerBI,Assess,Tools,TRUE,Analytics for DnA,Kelvin Schmalle,
+MS Power Apps for Internal Consumption,Adopt,Tools,TRUE,No code approach to automate simple busines solutions in Azure.,,
+MS Power Apps for External Use,Hold,Tools,TRUE,"There are many maintenance, versioning, compatibility issues to be overcome before Power Apps are ready for reliable delivery to customers.",,
+Functional Patterns,Adopt,Patterns & Techniques,TRUE,,Andrew K,
+Feature Flags (Release Toggles),Adopt,Patterns & Techniques,TRUE,,,
